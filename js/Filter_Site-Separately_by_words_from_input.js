@@ -4,10 +4,12 @@ function myFunction() {
         li.style.display = words.some(x => li.textContent.toUpperCase().indexOf(x) > -1) ? '' : 'none';
     });
 }
-
-let input = document.querySelector('#myInput');
-let elements = document.querySelectorAll('#myUL li');
-input.addEventListener('keyup', () => myFunction(input.value, elements));
+jQuery("#myInput").keyup(myFunction);
+//--------------
+// let input = document.querySelector('#myInput');
+// input.addEventListener('keyup', () => myFunction());
+//---------------
+// html: <input ... onkeyup="myFunction()"...
 
 
 /*---------------------------------------------------------------
@@ -19,6 +21,7 @@ li - это по каким тегам будет производится по�
 ----------------------------------------------------------------
 html:
 
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
 <input type="text" id="myInput" placeholder="Search">
  
 <ul id="myUL">
@@ -29,12 +32,12 @@ html:
     <li><a href="#"> setFunctionInfoValue</a></li>
     <li><a href="#"> axime sed, illum veniam harum quos? Rerum consectetur</a></li>
 </ul>
+
 get - найдет вариант 1,2
 set - найдет вариант 3,5
 get Info - найдет вариант 1,2,3,4,5
 ----------------------------------------------------------------*/
 // http://www.cyberforum.ru/javascript-beginners/thread2441685.html
-// https://codepen.io/anon/pen/XQxBeq?editors=1010
 // https://codepen.io/ArcCode/pen/vMVvOG?editors=1010
 
 
