@@ -13,9 +13,13 @@ function myFunction() {
             li[i].style.display = "none";
     }
 }
-let input = document.querySelector('#myInput');
-let elements = document.querySelectorAll('#myUL li');
-input.addEventListener('keyup', () => myFunction(input.value, elements));
+
+jQuery("#myInput").keyup(myFunction);
+//--------------
+// let input = document.querySelector('#myInput');
+// input.addEventListener('keyup', () => myFunction());
+//---------------
+// html: <input ... onkeyup="myFunction()"...
 
 
 
@@ -28,6 +32,7 @@ li - это по каким тегам будет производится по�
 ----------------------------------------------------------------
 html:
 
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
 <input type="text" id="myInput" placeholder="Search">
  
 <ul id="myUL">
@@ -40,5 +45,4 @@ html:
 </ul>
 ----------------------------------------------------------------*/
 // http://www.cyberforum.ru/javascript-beginners/thread2441685.html
-// https://codepen.io/anon/pen/oOaMwV?editors=1010
 // https://codepen.io/ArcCode/pen/GLYPgj?editors=1010
