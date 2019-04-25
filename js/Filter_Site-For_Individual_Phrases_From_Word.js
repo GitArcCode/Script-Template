@@ -1,6 +1,6 @@
-function myFunction(key, ul) {
-    const words = key.toUpperCase().trim().split(/\s+/g);
-    ul.forEach(li => {
+function myFunction() {
+    const words = document.querySelector('#myInput').value.toUpperCase().trim().split(/\s+/g);
+    document.querySelectorAll('#myUL li').forEach(li => {
         const text = li.textContent.toUpperCase();
  
         if (words.every(x => text.indexOf(x) > -1)) {
@@ -11,9 +11,7 @@ function myFunction(key, ul) {
     });
 }
  
-let input = document.querySelector('#myInput');
-let elements  = document.querySelectorAll('#myUL li');
-input.addEventListener('keyup', () => myFunction(input.value, elements));
+jQuery("#myInput").keyup(myFunction);
 
 
 
@@ -41,7 +39,6 @@ set - найдет вариант 3,5
 get Info - найдет вариант 1
 ----------------------------------------------------------------*/
 // http://www.cyberforum.ru/javascript-beginners/thread2441685.html
-// https://codepen.io/anon/pen/mgzjpy?editors=1010
 // https://codepen.io/ArcCode/pen/qwJLOW?editors=1010
 
 
