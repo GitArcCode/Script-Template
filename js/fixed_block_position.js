@@ -4,10 +4,15 @@
 		var element = $(".fixed_block");
 		var height_el = element.offset().top;
 		
+		//getStyle = document.getElementById('left_Sidebar').style.display //*
+		//document.getElementById('left_Sidebar').style.display='block'; //*
+		
 		$(".fixed_block_position").css({
 			"width": element.outerWidth(),//!!!
 			"height": element.outerHeight()//!!!
 		});
+
+		//document.getElementById('left_Sidebar').style.display = getStyle; //*
 
 		$(window).scroll(function() {
 			
@@ -24,8 +29,9 @@
 		});
 
 	});
+	
 
-
+// * для того, что бы при скрытии блока не ломалось
 
 /*-----------------------------------------------------------
 ЗАФИКСИРОВАТЬ БЛОК ПРИ ПРОКРУТКЕ:
@@ -55,5 +61,4 @@
 -------------------------------------
 https://www.pandoge.com/moduli_i_skripty/tri-varianta-fiksacii-elementa-na-sayte-na-css-jquery
 -----------------------------------------------------------------------*/
-// https://codepen.io/anon/pen/qwJyOM
 // https://codepen.io/ArcCode/pen/QPZJzM?editors=1010

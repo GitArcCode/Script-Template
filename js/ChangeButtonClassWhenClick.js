@@ -1,3 +1,4 @@
+//id_инпута.onclick = function show_hide() {
 function show_hide(id) {
     var div = document.getElementById(id);
     if(div.style.display == 'block') {

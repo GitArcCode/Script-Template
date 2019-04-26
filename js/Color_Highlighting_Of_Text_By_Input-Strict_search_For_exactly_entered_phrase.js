@@ -1,6 +1,6 @@
 const mysearch = (key,orig,wrap) => orig.replace(new RegExp('(<[^>]*>)|' + key.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'), 'gi'), (NEW, old) => old ? old : wrap[0] + NEW + wrap[1] );
  
-let input = document.querySelector('#input');
+let input = document.querySelector('#myInput');
 let txt = document.querySelector('#text').innerHTML;
 let txt2 = document.querySelector('#text2').innerHTML;
 //let txt3 = document.querySelector('#text3').innerHTML;
@@ -19,7 +19,7 @@ input.addEventListener('input',() => {
 Color_Highlighting_Of_Text_By_Input-Strict_search_For_exactly_entered_phrase.js
 ---------------------
 -------------
-input - это ид инпута (<... id="input" ...>)   
+myInput - это ид инпута (<... id="input" ...>)   
 text - это ид блока в котором искать и подсвечивать
 text2 - это ид блока в котором искать и подсвечивать
 text3 - это показано как продолжить скрипт, для еще большего количества блоков
